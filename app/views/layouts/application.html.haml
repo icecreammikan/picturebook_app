@@ -5,21 +5,25 @@
     %title PicturebookApp
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   %body
     %header
       .header__bar
         %h1.header__logo
-          %a{:href => "/"} ぴくちゃーぶっく
+          %a{:href => "/"}
+            %font{:face => "Light_AmeChanPop_Maru_v2_001"} ぴくちゃーぶっく
         .header__search
-          %form#form{:action => "自分のサイトURL", :method => "get"}
-          %input#sbox{:name => "s", :placeholder => "タイトルを入力", :type => "text"}/
-          %button#sbtn4{:type => "submit" }
+          %form#form{:action => "#", :method => "get"}
+          %input#sbox{:name => "s", :placeholder => " タイトルを入力", :type => "text"}/
+          %button#sbtn{:type => "submit" }
           -# %i.fas.fa-search
         .header__post
-          %a.header__post{:href => "/books/new"} 感想を書く
+          %a.header__post{:href => "/books/new"} レビュー
 
+
+    %main
+      .main.contents
 
 
     = yield

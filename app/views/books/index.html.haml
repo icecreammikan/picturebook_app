@@ -1,11 +1,18 @@
-.header
+.header 
   .header__logo
   .header__search
   .header__post
 
-.main.content
+
+.books.contents
   - @books.each do |book|
-    .content_book{:style => "background-image: url(#{book.image});"}
-      %p= book.title
+    .content_post{:style => "background-image: url(#{book.image});"}
+      .more
+        -# %span= image_tag 'arrow_top.png'
+        %ul.more_list
+          %li
+            = link_to '詳細', "/books/#{book.id}", method: :get
+ 
+      = simple_format(book.text)
       %span.title
         = book.title

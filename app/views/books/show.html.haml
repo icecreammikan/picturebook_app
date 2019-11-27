@@ -1,0 +1,11 @@
+.content
+  .content_post{:style => "background-image: url(#{@book.image});"}
+    .more
+      %span= image_tag 'arrow_top.png'
+      %ul.more_list
+    = simple_format(@book.text)
+    %span.title
+      = @book.title
+
+\-# %h1 Books#show
+\-# %p Find me in app/views/books/show.html.haml

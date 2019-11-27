@@ -1,0 +1,11 @@
+.header
+  .header__logo
+  .header__search
+  .header__post
+
+.main.content
+  - @books.each do |book|
+    .content_book{:style => "background-image: url(#{book.image});"}
+      %p= book.title
+      %span.title
+        = book.title

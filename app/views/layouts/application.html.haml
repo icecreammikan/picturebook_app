@@ -21,13 +21,16 @@
       })();
   %body
     %header.header
-      .header__bar.row
-        %h1.grid-6
-          %a{:href => "/"} ぴくちゃーぶっく
-        
-            = link_to  "レビュー", "/tweets/new", class: "post"
+      .header__bar
+        %h1.header__logo
+          %a{:href => "/books"} ぴくちゃーぶっく
+        -# .header__search
+
+        .header__post
+          = link_to  "レビュー", "/books/new", class: "post"
 
     = yield
-    %footer
-      %p
-        Copyright PicTweet 2019.
+
+    -# %footer
+    -#   %p
+    -#     Copyright picture book 2019.

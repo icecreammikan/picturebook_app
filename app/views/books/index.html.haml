@@ -6,15 +6,14 @@
 
 .content
   - @books.each do |book|
-  = render partial: "books/book", locals: { book: @book }
- 
-    -# .content_post{:style => "background-image: url(#{book.image});"}
-      -# .more
+    .content_post{:style => "background-image: url(#{book.image});"}
+      .more
         -# %span= image_tag 'arrow_top.png'
-        -# %ul.more_list
-        -#   %li
-        -#     = link_to '詳細', "/books/#{book.id}", method: :get
+        %ul.more_list
+          %li
+            = link_to '詳細', "/books/#{book.id}", method: :get
  
-      -# = simple_format(book.text)
+      = simple_format(book.text)
       -# %span.title
       -#   = book.title
+    = render partial: "book", locals: { book: book }

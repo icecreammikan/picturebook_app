@@ -13,11 +13,12 @@
   align-items: center;
 
   .header__logo {
+  // .wf-nikukyu { font-family: "Nikukyu"; }
     a{
       font-size: 45px;
       text-decoration: none;
       color: white;
-      // font-family: "あめちゃんポップ";
+      font-weight: bold;
     }
   }
   .header__search {
@@ -28,13 +29,13 @@
   }
   .header__post {
     margin-right: 10px;
-    text-decoration: none;
     border-radius:15px;
-    font-weight: bold;
-    color: white;
+    // background-color: rgb(240, 214, 222);
     a{
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
       line-height: 30px;
-      // background-color: palevioletred;
     }
     // border: solid;
   }

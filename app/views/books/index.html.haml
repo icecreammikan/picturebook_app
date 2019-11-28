@@ -1,18 +1,20 @@
-.header 
-  .header__logo
-  .header__search
-  .header__post
+-# .header 
+-#   .header__logo
+-#   .header__search
+-#   .header__post
 
 
-.books.contents
+.content
   - @books.each do |book|
-    .content_post{:style => "background-image: url(#{book.image});"}
-      .more
-        -# %span= image_tag 'arrow_top.png'
-        %ul.more_list
-          %li
-            = link_to '詳細', "/books/#{book.id}", method: :get
+  = render partial: "books/book", locals: { book: @book }
  
-      = simple_format(book.text)
-      %span.title
-        = book.title
+    -# .content_post{:style => "background-image: url(#{book.image});"}
+      -# .more
+        -# %span= image_tag 'arrow_top.png'
+        -# %ul.more_list
+        -#   %li
+        -#     = link_to '詳細', "/books/#{book.id}", method: :get
+ 
+      -# = simple_format(book.text)
+      -# %span.title
+      -#   = book.title

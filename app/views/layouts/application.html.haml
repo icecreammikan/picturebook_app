@@ -2,28 +2,32 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title PicturebookApp
+    %title ぴくちゃーぶっく
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    :javascript
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
   %body
-    %header
-      .header__bar
-        %h1.header__logo
-          %a{:href => "/"}
-            %font{:face => "Light_AmeChanPop_Maru_v2_001"} ぴくちゃーぶっく
-        .header__search
-          %form#form{:action => "#", :method => "get"}
-          %input#sbox{:name => "s", :placeholder => " タイトルを入力", :type => "text"}/
-          %button#sbtn{:type => "submit" }
-          -# %i.fas.fa-search
-        .header__post
-          %a.header__post{:href => "/books/new"} レビュー
-
-
-    %main
-      .main.contents
-
+    %header.header
+      .header__bar.row
+        %h1.grid-6
+          %a{:href => "/"} ぴくちゃーぶっく
+        
+            = link_to  "レビュー", "/tweets/new", class: "post"
 
     = yield
+    %footer
+      %p
+        Copyright PicTweet 2019.

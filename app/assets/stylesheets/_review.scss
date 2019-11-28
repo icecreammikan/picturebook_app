@@ -1,0 +1,39 @@
+.container {
+  h3{
+    font-size: 30px;
+    text-align: center;
+  }
+  flex-direction: column;
+  position: relative;
+  padding-top: 90px;
+  // align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  // width: 600px;
+  // align-items: center;
+  // display: flex;
+  // justify-content: center
+}
+
+  #title{
+    display: block;
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  #image{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  #text{
+    display: block;
+    height: 90px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .btn{
+    margin-top: 30px;
+  }

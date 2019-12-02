@@ -1,0 +1,7 @@
+.content
+  .container
+    = form_with(model: [@books,@reviews], local: true) do |form|
+      %h3
+        レビュー
+
+      = render partial: "form", locals: { form: form }

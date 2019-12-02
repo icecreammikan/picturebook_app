@@ -1,0 +1,11 @@
+.content_book
+  .more
+    %ul.more_list
+      %li
+        = link_to '詳細', "/books/#{book.id}", method: :get
+
+      %a{:href => "/books/#{@book.title.id}"}
+        = book.title
+    -# %span.title
+        -# %span 投稿者
+

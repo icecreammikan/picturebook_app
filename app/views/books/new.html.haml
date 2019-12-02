@@ -1,0 +1,7 @@
+.container_post
+  .container
+    = form_with(model: @book, local: true) do |form|
+      %h3
+        とうこう
+
+      = render partial: "form", locals: { form: form }

@@ -3,6 +3,8 @@
     .content_book{data: {id: "#{@book.id}"}}
       .book_title
         = simple_format @book.title
+        .book_author
+          =@book.author
       .book_image
         - if @book.image.present?
           = image_tag @book.image.url, :id => "book_image"

@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   post 'books/new'
   post 'books/create'
   post 'books/show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # get  '/uploads/book/image'
   root to: "books#index"
-  resources :books, only: [:index, :new, :create, :show]
+  resources :books do
+    resources :reviews, only: [:new, :create]
+  end
+  # , only: [:index, :new, :create, :update, :show]
+
 end

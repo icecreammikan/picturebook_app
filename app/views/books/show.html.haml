@@ -1,11 +1,36 @@
 .content
-  .content_post{:style => "background-image: url(#{@book.image});"}
-    .more
-      %span= image_tag 'arrow_top.png'
-      %ul.more_list
-    = simple_format(@book.text)
-    %span.title
+  .content_post{data: {id: "#{@book.id}"}}
+    .book_title
       = @book.title
+    .book_image
+      - if @book.image.present?
+        = image_tag @book.image.url
+  -# {:style => "background-image: url(#{@book.image});"}
+-#     .more
 
-\-# %h1 Books#show
-\-# %p Find me in app/views/books/show.html.haml
+-#       -# %span= image_tag 'arrow_top.png'
+-#       %ul.more_list
+-#         %img{:src => "#{@book.image}", :width => "100"}/
+-#     -# = simple_format(reviews.review)
+-#     %span.title
+-#       = book.title
+
+-# .reviews
+-#   - @reviews.each do |review|
+-#     %p
+-#       = review.text
+
+
+.container
+  = form_with(model: [@book, @review], local: true) do |form|
+    = form.text_area :review, placeholder: "コメントする", rows: "2"
+    = form.submit "SEND"
+
+
+-# = form.text_area :review, placeholder: "  感想を書いてください" , rows: "10"
+.reviews
+  %h4 ＜レビュー一覧＞
+  - if @review.review.present?
+    - @reviews.each do |review|
+      .reviews_review
+        = review.review

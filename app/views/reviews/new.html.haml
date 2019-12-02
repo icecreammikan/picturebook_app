@@ -1,6 +1,6 @@
 .content
   .container
-    = form_with(model: @book, local: true) do |form|
+    = form_with(model: [@books,@reviews], local: true) do |form|
       %h3
         レビュー
 

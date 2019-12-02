@@ -1,25 +1,36 @@
 .container {
+  text-align: center;
+  margin: 0 auto;
+  flex-direction: column;
+  background-color: rgb(238, 238, 196);
+  position: relative;
+  // top: 100px;
+  height: 320px;
   h3{
     font-size: 45px;
     font-weight: bold;
-    text-align: center;
+    // text-align: center;
     color: gray;
   }
-  // background-color: rgb(238, 238, 196);
-  flex-direction: column;
-  position: absolute;
-  position: relative;
-  top: 130px;
+  // position: absolute;
+  // display: inline-block; 
+  // width: 100vh;
   // align-items: center;
-  text-align: center;
-  margin: 0 auto;
   // width: 600px;
   // align-items: center;
   // display: flex;
   // justify-content: center
-}
 
-  #title{
+
+  #book_title{
+    display: block;
+    height: 35px;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius:10px;
+  }
+  #book_author{
     display: block;
     height: 30px;
     width: 200px;
@@ -27,19 +38,17 @@
     margin-top: 30px;
     border-radius:10px;
   }
-  #image{
+  #book_image{
     display: block;
     margin: 0 auto;
     margin-top: 30px;
+    margin-bottom: 30px;
   }
-  #text{
-    display: block;
-    height: 90px;
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 30px;
-    border-radius:10px;
-    .btn{
-      margin-top: 30px;
-    }
-  }
+  // #book_review{
+  //   display: block;
+  //   height: 90px;
+  //   width: 400px;
+  //   margin: 30px auto;
+  //   border-radius:10px;
+  // }
+}

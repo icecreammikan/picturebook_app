@@ -5,12 +5,13 @@
 .header__bar {
   position: absolute;
   top: 0px;
-  width: 100%;
+  width: 95vw;
   height: 80px;
   background-color: pink;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
 
   .header__logo {
   // .wf-nikukyu { font-family: "Nikukyu"; }
@@ -21,22 +22,22 @@
       font-weight: bold;
     }
   }
-  .header__search {
-    #sbox{
-      line-height: 20px;
-      border-radius:25px;
-    }
-  }
+  // .header__search {
+  //   #sbox{
+  //     line-height: 20px;
+  //     border-radius:25px;
+  //   }
+  // }
   .header__post {
     margin-right: 10px;
     border-radius:15px;
-    // background-color: rgb(240, 214, 222);
     a{
       font-weight: bold;
       text-decoration: none;
       color: white;
       line-height: 30px;
     }
+    // background-color: rgb(240, 214, 222);
     // border: solid;
   }
 }

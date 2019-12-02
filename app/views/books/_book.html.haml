@@ -1,19 +1,17 @@
--# .content
--#   - @books.each do |book|
--#     .content_post{:style => "background-image: url(#{book.image});"}
--#       .more
--#         -# %span= image_tag 'arrow_top.png'
--#         %ul.more_list
--#           %li
--#             = link_to '詳細', "/books/#{book.id}", method: :get
- 
--#       = simple_format(book.text)
--#       -# %span.title
--#       -#   = book.title
-.content_post{:style => "background-image: url(#{tweet.image});"}
+.content_post{
   .more
-    %span= image_tag 'arrow_top.png'
+    -# %span= image_tag 'arrow_top.png'
     %ul.more_list
       %li
         = link_to '詳細', "/books/#{book.id}", method: :get
-    = simple_format(book.text)
+    
+    -# = simple_format(review.review)
+
+
+      %a{:href => "/books/#{@book.title.id}"}
+    -# %span.title
+        -# %span 投稿者
+        = book.title
+
+-#       -# %span.title
+-#       -#   = book.title

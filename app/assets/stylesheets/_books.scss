@@ -4,17 +4,46 @@
 
 .content{
   position: absolute;
-  margin: 100px 60px 0px;
-  height: 100px;
+  margin: 90px 60px 0px;
   width: 90vw;
-  // vertical-align:  middle;
-  // text-align: center;
-  // background-color: olive;
-
+  overflow: scroll;
+  max-height: 100vh;
+  margin-bottom: 40px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
   .content_post{
-    height: 90px;
-    width: 300px;
-    background-color: rgb(233, 191, 114);
-    margin: 30px 20px 0px;
+    display: block;
+    background: #fffde8;
+    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+    border: dashed 2px #ffb03f;/*破線*/
+    border-radius: 9px;
+    margin-left: 10px;/*はみ出ないように調整*/
+    margin-right: 10px;/*はみ出ないように調整*/
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 0.5em 0.5em 0.5em 2em;
+
+    a{
+      text-decoration: none;
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(118, 131, 128);
+      display: block;
+      padding-bottom: 10px;
+      font-family: "Nico Moji";
+    }
+    #book_image{
+      height: 150px;
+      width: 120px;
+      display: block;
+    }
   }
+
+footer{
+  text-align: center;
+  position: absolute;
+  bottom: -120px;
+  line-height: 40px;
+  width: 100vw;
+  background-color: pink;
 }

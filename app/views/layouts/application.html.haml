@@ -7,6 +7,11 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %link{:href => "https://fonts.googleapis.com/earlyaccess/nikukyu.css", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/earlyaccess/nicomoji.css", :rel => "stylesheet"}/
+
+
+
     -# :javascript
     -#   WebFontConfig = {
     -#     google: { families: [ 'Unica+One::latin' ] }
@@ -26,13 +31,10 @@
         %h1.header__logo
           %a{:href => "/books"} ぴくちゃーぶっく
 
-        -# .header__search
-
         .header__post
-          = link_to  "レビュー", "/books/new", class: "post"
+          = link_to  "とうこう", "/books/new", class: "post"
 
     = yield
 
-    -# %footer
-    -#   %p
-    -#     Copyright picture book 2019.
+  %footer
+    Copyright picture book 2019.

@@ -1,10 +1,9 @@
 .content
   - @books.each do |book|
     .content_post
-      = book.title
-      = book.image
-      = link_to '詳細', "/books/#{book.id}", method: :get
- 
+      = link_to book.title, "/books/#{book.id}", method: :get
 
-      -# = simple_format(review.review)
-  -# = render partial: "book", locals: { book: book }
+      - if book.image.present?
+        = image_tag book.image.url, :id => "book_image"
+
+  -# = render partial: "book", locals: { books: @books }

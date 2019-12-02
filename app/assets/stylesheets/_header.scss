@@ -2,6 +2,7 @@
 //   font-family: "あめちゃんポップ";
 //   src: url("/Users/icecreammikan/projects/picturebook_app/app/assets/fonts")
 // }
+// .wf-nikukyu {  }
 .header__bar {
   position: absolute;
   top: 0px;
@@ -12,32 +13,26 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-
   .header__logo {
-  // .wf-nikukyu { font-family: "Nikukyu"; }
     a{
-      font-size: 45px;
+      font-family: "Nikukyu";
+      font-size: 50px;
       text-decoration: none;
       color: white;
       font-weight: bold;
+      line-height: 80px;
     }
   }
-  // .header__search {
-  //   #sbox{
-  //     line-height: 20px;
-  //     border-radius:25px;
-  //   }
-  // }
+
   .header__post {
-    margin-right: 10px;
-    border-radius:15px;
+    margin-right: 30px;
     a{
+      font-size: 20px;
       font-weight: bold;
       text-decoration: none;
       color: white;
       line-height: 30px;
+      font-family: "Nikukyu";
     }
-    // background-color: rgb(240, 214, 222);
-    // border: solid;
   }
 }

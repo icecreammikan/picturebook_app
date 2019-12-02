@@ -30,7 +30,8 @@
 -# = form.text_area :review, placeholder: "  感想を書いてください" , rows: "10"
 .reviews
   %h4 ＜レビュー一覧＞
-  - if @review.review.present?
+  - if @reviews.present?
     - @reviews.each do |review|
       .reviews_review
+        = simple_format review.review
         = review.review

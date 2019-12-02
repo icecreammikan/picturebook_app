@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     @review = Review.create(review_params)
     respond_to do |format|
       format.html { redirect_to book_path(params[:book_id])  }
-      # redirect_to "/books/#{review.book.id}"
+      # redirect_to "/books/#{@review.book.id}"
     end
   end
 

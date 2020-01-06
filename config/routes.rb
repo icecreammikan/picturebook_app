@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get  'users/show'
   post 'books/index'
   post 'books/new'
   post 'books/create'

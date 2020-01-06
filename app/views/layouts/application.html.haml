@@ -26,15 +26,18 @@
     -#     s.parentNode.insertBefore(wf, s);
     -#   })();
   %body
-    %header.header
-      .header__bar
-        %h1.header__logo
-          %a{:href => "/books"} ぴくちゃーぶっく
+  %p.notice= notice
+  %p.alert= alert
 
-        .header__post
-          = link_to  "とうこう", "/books/new", class: "post"
+  %header.header
+    .header__bar
+      %h1.header__logo
+        %a{:href => "/books"} ぴくちゃーぶっく
 
-    = yield
+      .header__post
+        = link_to  "とうこう", "/books/new", class: "post"
+
+  = yield
 
   %footer
     Copyright picture book 2019.
